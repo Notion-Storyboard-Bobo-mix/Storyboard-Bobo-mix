@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAM A</title>
+</head>
+
+<body>
+    <div class="storyboard">
+        <img src="images/cadre1.svg" class="cadrage" alt="Cadrage">
+
+        <!-- Cercle transparent pour le clic -->
+        <div class="circle" id="circle1" onclick="openPage('index-cam1.html')"></div>
+        <div class="circle" id="circle2" onclick="openPage('index-cam2.html')"></div>
+    </div>
+
+
+    <style>
+        
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            /* background: #191919; */
+            background: none;
+        }
+
+        .storyboard {
+            position: relative;
+            width: 80vw;
+            height: 80vh;
+
+
+        }
+
+        .cadrage {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background: rgba(255, 255, 255, 0.25); */
+            box-shadow: 0 8px 32px 0 rgba(27, 31, 86, 0.37);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .camera {
+            position: absolute;
+            width: 5%;
+            height: auto;
+            cursor: pointer;
+        }
+
+
+        .camera1 {
+            top: 10%;
+            left: 15%;
+        }
+
+        .camera2 {
+            top: 50%;
+            left: 60%;
+        }
+
+        /* Cercle cliquable */
+        .circle {
+            /* display: none; */
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: rgba(170, 40, 40, 0);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .circle:hover {
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        /* Positionnez les cercles aux emplacements désirés */
+        #circle1 {
+            top: 22%;
+            left: 27%;
+        }
+
+        #circle2 {
+            top: 72%;
+            left: 83%;
+        }
+
+        /* RESPONSIVE  */
+        @media (min-width: 800px) {
+            #circle1 {
+                top: 6%;
+                left: 31%;
+            }
+
+        }
+    </style>
+
+    <script>
+        function openPage(url) {
+            window.location.href = url; // Change l'URL de la page actuelle
+        }
+    </script>
+
+</body>
+
+</html>
